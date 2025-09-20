@@ -108,7 +108,7 @@ const SignUp = () => {
           variant="outline"
           className="cursor-pointer rounded-md hover:bg-gray-200"
           content={
-            <div className="flex items-center gap-x-3">
+            <div className="flex items-center gap-x-3 text-wrap">
               <Google className="size-6" /> Sign in with Google
             </div>
           }
