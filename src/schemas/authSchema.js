@@ -23,4 +23,15 @@ const signUpSchema = Joi.object({
     }),
 });
 
-export { signUpSchema };
+const signInSchema = Joi.object({
+  email: Joi.string().email({ tlds: false }).required().messages({
+    "string.empty": "Please enter your email address",
+    "string.email": "Please enter a valid email address",
+  }),
+
+  password: Joi.string().required().messages({
+    "string.empty": "Please enter your password",
+  }),
+});
+
+export { signUpSchema, signInSchema };
