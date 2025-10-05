@@ -1,11 +1,7 @@
-import { SignUp, AuthLayout } from "../../../shared";
+import { SignUp } from "@/screens";
 
 const SignUpPage = () => {
-  return (
-    <AuthLayout>
-      <SignUp />
-    </AuthLayout>
-  );
+  return <SignUp />;
 };
 
 export default SignUpPage;

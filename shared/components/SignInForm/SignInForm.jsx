@@ -16,7 +16,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import CustomButton from "../CustomButton/CustomButton";
 import GoogleAuthButton from "../GoogleAuthButton/GoogleAuthButton";
 
-const SignIn = () => {
+const SignInForm = () => {
   const [showPass, setShowPass] = useState(false);
 
   const togglePass = () => setShowPass((prev) => !prev);
@@ -104,4 +104,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignInForm;
