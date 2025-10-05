@@ -4,6 +4,7 @@ import CustomInput from "./CustomInput/CustomInput";
 import CustomLabel from "./CustomLabel/CustomLabel";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 import CustomButton from "./CustomButton/CustomButton";
+import CustomCheckbox from "./CustomCheckbox/CustomCheckbox";
 import GoogleAuthButton from "./GoogleAuthButton/GoogleAuthButton";
 
 export {
@@ -13,5 +14,6 @@ export {
   CustomLabel,
   CustomButton,
   ErrorMessage,
+  CustomCheckbox,
   GoogleAuthButton,
 };
