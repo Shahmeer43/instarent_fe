@@ -80,7 +80,9 @@ const SignInForm = () => {
             <CustomCheckbox />
             Remember Me
           </div>
-          <Link href={""}>Forgot Password?</Link>
+          <Link href={""} className="text-gray-400">
+            Forgot Password?
+          </Link>
         </div>
         <CustomButton
           type="submit"
