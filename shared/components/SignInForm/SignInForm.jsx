@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { VscEye } from "react-icons/vsc";
 import { useForm } from "react-hook-form";
@@ -14,6 +15,7 @@ import Label from "../CustomLabel/CustomLabel";
 import { joiResolver } from "@hookform/resolvers/joi";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import CustomButton from "../CustomButton/CustomButton";
+import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 import GoogleAuthButton from "../GoogleAuthButton/GoogleAuthButton";
 
 const SignInForm = () => {
@@ -42,6 +44,7 @@ const SignInForm = () => {
         <p className="text-2xl font-semibold">Welcome Back to InstaRent!</p>
         <p className="text-sm">Sign in your account</p>
       </div>
+
       <div>
         <div>
           <Label htmlFor="email" text="Email" className="mb-2" />
@@ -71,6 +74,13 @@ const SignInForm = () => {
             }
           />
           <ErrorMessage message={errors?.password?.message} />
+        </div>
+        <div className="flex justify-between mb-3 text-sm">
+          <div className="flex items-center gap-x-2">
+            <CustomCheckbox />
+            Remember Me
+          </div>
+          <Link href={""}>Forgot Password?</Link>
         </div>
         <CustomButton
           type="submit"
