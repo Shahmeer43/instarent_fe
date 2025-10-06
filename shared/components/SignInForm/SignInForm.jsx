@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { VscEye } from "react-icons/vsc";
-import { useForm } from "react-hook-form";
 import { VscEyeClosed } from "react-icons/vsc";
 import { MdOutlineEmail } from "react-icons/md";
 import { TbLockPassword } from "react-icons/tb";
+import { useForm, Controller } from "react-hook-form";
 
 import { Google } from "@/assets/svgs";
 import { signInSchema } from "@/schemas";
@@ -24,6 +24,7 @@ const SignInForm = () => {
   const togglePass = () => setShowPass((prev) => !prev);
 
   const {
+    control,
     register,
     handleSubmit,
     formState: { errors },
@@ -77,7 +78,16 @@ const SignInForm = () => {
         </div>
         <div className="flex justify-between mb-3 text-sm">
           <div className="flex items-center gap-x-2">
-            <CustomCheckbox />
+            <Controller
+              name="rememberMe"
+              control={control}
+              render={({ field }) => (
+                <CustomCheckbox
+                  checked={!!field.value}
+                  onCheckedChange={(checked) => field.onChange(!!checked)}
+                />
+              )}
+            />
             Remember Me
           </div>
           <Link href={""} className="text-gray-400">

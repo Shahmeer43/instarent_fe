@@ -32,6 +32,8 @@ const signInSchema = Joi.object({
   password: Joi.string().required().messages({
     "string.empty": "Please enter your password",
   }),
+
+  rememberMe: Joi.boolean().default(false),
 });
 
 export { signUpSchema, signInSchema };
