@@ -12,11 +12,14 @@ import { Google } from "@/assets/svgs";
 import { signInSchema } from "@/schemas";
 import Input from "../CustomInput/CustomInput";
 import Label from "../CustomLabel/CustomLabel";
+import { routesConstants } from "../../constants";
 import { joiResolver } from "@hookform/resolvers/joi";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import CustomButton from "../CustomButton/CustomButton";
 import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 import GoogleAuthButton from "../GoogleAuthButton/GoogleAuthButton";
+
+const { SIGNUP } = routesConstants;
 
 const SignInForm = () => {
   const [showPass, setShowPass] = useState(false);
@@ -119,7 +122,7 @@ const SignInForm = () => {
         />
         <p className="text-sm text-center">
           Dont have any account?{" "}
-          <Link href={"/signup"} className="text-blue-500 font-medium">
+          <Link href={SIGNUP} className="text-blue-500 font-medium">
             Sign Up
           </Link>
         </p>

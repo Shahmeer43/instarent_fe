@@ -13,10 +13,13 @@ import { Google } from "@/assets/svgs";
 import { signUpSchema } from "@/schemas";
 import Input from "../CustomInput/CustomInput";
 import Label from "../CustomLabel/CustomLabel";
+import { routesConstants } from "../../constants";
 import { joiResolver } from "@hookform/resolvers/joi";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import CustomButton from "../CustomButton/CustomButton";
 import GoogleAuthButton from "../GoogleAuthButton/GoogleAuthButton";
+
+const { SIGNIN } = routesConstants;
 
 const SignUpForm = () => {
   const [showPass, setShowPass] = useState(false);
@@ -116,7 +119,7 @@ const SignUpForm = () => {
         />
         <p className="text-sm text-center">
           Already have an account?{" "}
-          <Link href={"/signin"} className="text-blue-500 font-medium">
+          <Link href={SIGNIN} className="text-blue-500 font-medium">
             Sign In
           </Link>
         </p>
