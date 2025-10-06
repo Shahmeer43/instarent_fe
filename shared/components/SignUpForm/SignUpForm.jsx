@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { VscEye } from "react-icons/vsc";
 import { useForm } from "react-hook-form";
@@ -115,7 +116,9 @@ const SignUpForm = () => {
         />
         <p className="text-sm text-center">
           Already have an account?{" "}
-          <span className="text-blue-500 font-medium">Sign In</span>
+          <Link href={"/signin"} className="text-blue-500 font-medium">
+            Sign In
+          </Link>
         </p>
       </div>
     </form>
