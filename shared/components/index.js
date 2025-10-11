@@ -1,3 +1,4 @@
+import RoleCard from "./RoleCard/RoleCard";
 import SignInForm from "./SignInForm/SignInForm";
 import SignUpForm from "./SignUpForm/SignUpForm";
 import CustomInput from "./CustomInput/CustomInput";
@@ -8,6 +9,7 @@ import CustomCheckbox from "./CustomCheckbox/CustomCheckbox";
 import GoogleAuthButton from "./GoogleAuthButton/GoogleAuthButton";
 
 export {
+  RoleCard,
   SignInForm,
   SignUpForm,
   CustomInput,
