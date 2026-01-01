@@ -6,7 +6,9 @@ import CustomLabel from "./CustomLabel/CustomLabel";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 import CustomButton from "./CustomButton/CustomButton";
 import CustomCheckbox from "./CustomCheckbox/CustomCheckbox";
+import CustomLinkButton from "./CustomLinkButton/CustomLinkButton";
 import GoogleAuthButton from "./GoogleAuthButton/GoogleAuthButton";
+import RoleConfirmationCard from "./RoleConfirmationCard/RoleConfirmationCard";
 
 export {
   RoleCard,
@@ -18,4 +20,6 @@ export {
   ErrorMessage,
   CustomCheckbox,
   GoogleAuthButton,
+  CustomLinkButton,
+  RoleConfirmationCard,
 };
